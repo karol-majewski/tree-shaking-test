@@ -1,3 +1,3 @@
-import * as option from "fp-ts/es6/Option";
+import { fromNullable } from './facade';
 
-console.log(option.fromNullable(1));
+console.log(fromNullable(1));
