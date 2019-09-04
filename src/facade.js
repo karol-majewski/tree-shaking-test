@@ -6,5 +6,8 @@ import * as operators from 'rxjs/operators';
 
 export const { zip, throwError } = Rx;
 export const { bifunctor, boundedMeetSemilattice } = FP;
+export const { map, mergeMap, switchMap } = operators;
 
-export { fromNullable, alternative, operators };
+export { fromNullable, alternative };
+
+export * from '.';
