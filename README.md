@@ -20,3 +20,82 @@ code ./target/index.js
 ## Using Webpack Bundle Analyzer
 
 Run `yarn webpack` and navigate to http://127.0.0.1:8888/ in your browser.
+
+## Chunking
+
+### Bundle content overview
+
+![Imgur](https://i.imgur.com/MWci6J1.jpg)
+
+### Chunks
+
+These were generated in `development` mode.
+
+<details>
+<summary>switch-mapper</summary>
+
+```js
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["switch-mapper"],{
+
+/***/ "./src/switch-mapper.js":
+/*!******************************!*\
+  !*** ./src/switch-mapper.js ***!
+  \******************************/
+/*! exports provided: default */
+/*! all exports used */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (Rx.of(1).pipe(
+  Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__[/* map */ "a"])(value => value + 1),
+  Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__[/* switchMap */ "c"])(rxjs__WEBPACK_IMPORTED_MODULE_0__[/* identity */ "a"])
+));
+
+
+/***/ })
+
+}]);
+```
+
+
+</details>
+
+<details>
+<summary>merge-mapper</summary>
+
+```js
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["merge-mapper"],{
+
+/***/ "./src/merge-mapper.js":
+/*!*****************************!*\
+  !*** ./src/merge-mapper.js ***!
+  \*****************************/
+/*! exports provided: default */
+/*! all exports used */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (Rx.of(1).pipe(
+  Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__[/* map */ "a"])(value => value + 1),
+  Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__[/* mergeMap */ "b"])(rxjs__WEBPACK_IMPORTED_MODULE_0__[/* identity */ "a"])
+));
+
+
+/***/ })
+
+}]);
+```
+
+</details>

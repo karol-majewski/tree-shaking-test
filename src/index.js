@@ -1,4 +1,4 @@
-import * as facade from './facade';
-import { Subject, scheduled, range, merge } from 'rxjs';
+const SwitchMapper = import(/* webpackChunkName: "switch-mapper" */ './switch-mapper');
+const MergeMapper = import(/* webpackChunkName: "merge-mapper" */ './merge-mapper');
 
-console.log(facade.fromNullable(1));
+console.log(SwitchMapper, MergeMapper);

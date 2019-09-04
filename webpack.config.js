@@ -10,8 +10,8 @@ const ENTRY_FILENAME = "index.js";
 const OUTPUT_FILENAME = "index.js";
 
 const config = {
-  mode: "production",
-  devtool: "source-map",
+  mode: "development",
+  devtool: false,
   plugins: [
     new BundleAnalyzerPlugin({
       defaultSizes: 'stat',
@@ -20,9 +20,11 @@ const config = {
     })
   ],
   optimization: {
-    usedExports: true
+    usedExports: true,
+    splitChunks: {
+      chunks: 'all',
+    },
   },
-  // mode: "production",
   entry: pathHelpers.resolve(SRC_PATH, ENTRY_FILENAME),
   output: {
     path: TARGET_PATH,
