@@ -1,0 +1,739 @@
+{
+  "errors": [
+  ],
+  "warnings": [
+  ],
+  "version": "4.39.2",
+  "hash": "e3e5b4c4b3bd7737554e",
+  "time": 119,
+  "builtAt": 1567607768478,
+  "publicPath": "",
+  "outputPath": "/Users/Karol/Projects/Open Source/tree-shaking-test/target/",
+  "assetsByChunkName": {
+    "main": [
+      "index.js",
+      "index.js.map"
+    ]
+  },
+  "assets": [
+    {
+      "name": "index.js",
+      "size": 35259,
+      "chunks": [
+        "main"
+      ],
+      "chunkNames": [
+        "main"
+      ],
+      "emitted": true
+    },
+    {
+      "name": "index.js.map",
+      "size": 39479,
+      "chunks": [
+        "main"
+      ],
+      "chunkNames": [
+        "main"
+      ],
+      "emitted": true
+    }
+  ],
+  "filteredAssets": 0,
+  "entrypoints": {
+    "main": {
+      "chunks": [
+        "main"
+      ],
+      "assets": [
+        "index.js",
+        "index.js.map"
+      ],
+      "children": {
+      },
+      "childAssets": {
+      }
+    }
+  },
+  "namedChunkGroups": {
+    "main": {
+      "chunks": [
+        "main"
+      ],
+      "assets": [
+        "index.js",
+        "index.js.map"
+      ],
+      "children": {
+      },
+      "childAssets": {
+      }
+    }
+  },
+  "chunks": [
+    {
+      "id": "main",
+      "rendered": true,
+      "initial": true,
+      "entry": true,
+      "size": 27500,
+      "names": [
+        "main"
+      ],
+      "files": [
+        "index.js",
+        "index.js.map"
+      ],
+      "hash": "1f41e7bbf71075497e00",
+      "siblings": [
+      ],
+      "parents": [
+      ],
+      "children": [
+      ],
+      "childrenByOrder": {
+      },
+      "modules": [
+        {
+          "id": "./node_modules/fp-ts/es6/Option.js",
+          "identifier": "/Users/Karol/Projects/Open Source/tree-shaking-test/node_modules/fp-ts/es6/Option.js",
+          "name": "./node_modules/fp-ts/es6/Option.js",
+          "index": 1,
+          "index2": 2,
+          "size": 16805,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            "main"
+          ],
+          "issuer": "/Users/Karol/Projects/Open Source/tree-shaking-test/src/index.js",
+          "issuerId": "./src/index.js",
+          "issuerName": "./src/index.js",
+          "issuerPath": [
+            {
+              "id": "./src/index.js",
+              "identifier": "/Users/Karol/Projects/Open Source/tree-shaking-test/src/index.js",
+              "name": "./src/index.js"
+            }
+          ],
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [
+          ],
+          "reasons": [
+            {
+              "moduleId": "./src/index.js",
+              "moduleIdentifier": "/Users/Karol/Projects/Open Source/tree-shaking-test/src/index.js",
+              "module": "./src/index.js",
+              "moduleName": "./src/index.js",
+              "type": "harmony side effect evaluation",
+              "userRequest": "fp-ts/es6/Option",
+              "loc": "1:0-48"
+            },
+            {
+              "moduleId": "./src/index.js",
+              "moduleIdentifier": "/Users/Karol/Projects/Open Source/tree-shaking-test/src/index.js",
+              "module": "./src/index.js",
+              "moduleName": "./src/index.js",
+              "type": "harmony import specifier",
+              "userRequest": "fp-ts/es6/Option",
+              "loc": "3:12-24"
+            }
+          ],
+          "usedExports": [
+            "fromNullable"
+          ],
+          "providedExports": [
+            "URI",
+            "none",
+            "some",
+            "isSome",
+            "isNone",
+            "fold",
+            "fromNullable",
+            "toNullable",
+            "toUndefined",
+            "getOrElse",
+            "elem",
+            "exists",
+            "fromPredicate",
+            "tryCatch",
+            "getLeft",
+            "getRight",
+            "getRefinement",
+            "mapNullable",
+            "getShow",
+            "getEq",
+            "getOrd",
+            "getApplySemigroup",
+            "getApplyMonoid",
+            "getFirstMonoid",
+            "getLastMonoid",
+            "getMonoid",
+            "option",
+            "alt",
+            "ap",
+            "apFirst",
+            "apSecond",
+            "chain",
+            "chainFirst",
+            "duplicate",
+            "extend",
+            "filter",
+            "filterMap",
+            "flatten",
+            "foldMap",
+            "map",
+            "partition",
+            "partitionMap",
+            "reduce",
+            "reduceRight",
+            "compact",
+            "separate",
+            "fromEither"
+          ],
+          "optimizationBailout": [
+          ],
+          "depth": 1,
+          "source": "var __assign = (this && this.__assign) || function () {\n    __assign = Object.assign || function(t) {\n        for (var s, i = 1, n = arguments.length; i < n; i++) {\n            s = arguments[i];\n            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))\n                t[p] = s[p];\n        }\n        return t;\n    };\n    return __assign.apply(this, arguments);\n};\nimport { pipeable } from './pipeable';\n/**\n * @since 2.0.0\n */\nexport var URI = 'Option';\n/**\n * @since 2.0.0\n */\nexport var none = { _tag: 'None' };\n/**\n * @since 2.0.0\n */\nexport function some(a) {\n    return { _tag: 'Some', value: a };\n}\n/**\n * Returns `true` if the option is an instance of `Some`, `false` otherwise\n *\n * @example\n * import { some, none, isSome } from 'fp-ts/lib/Option'\n *\n * assert.strictEqual(isSome(some(1)), true)\n * assert.strictEqual(isSome(none), false)\n *\n * @since 2.0.0\n */\nexport function isSome(fa) {\n    return fa._tag === 'Some';\n}\n/**\n * Returns `true` if the option is `None`, `false` otherwise\n *\n * @example\n * import { some, none, isNone } from 'fp-ts/lib/Option'\n *\n * assert.strictEqual(isNone(some(1)), false)\n * assert.strictEqual(isNone(none), true)\n *\n * @since 2.0.0\n */\nexport function isNone(fa) {\n    return fa._tag === 'None';\n}\n/**\n * We can pattern match using the `fold` function\n *\n * @example\n * import { some, none, fold } from 'fp-ts/lib/Option'\n * import { pipe } from 'fp-ts/lib/pipeable'\n *\n * assert.strictEqual(\n *   pipe(\n *     some(1),\n *     fold(() => 'a none', a => `a some containing ${a}`)\n *   ),\n *   'a some containing 1'\n * )\n *\n * assert.strictEqual(\n *   pipe(\n *     none,\n *     fold(() => 'a none', a => `a some containing ${a}`)\n *   ),\n *   'a none'\n * )\n *\n * @since 2.0.0\n */\nexport function fold(onNone, onSome) {\n    return function (ma) { return (isNone(ma) ? onNone() : onSome(ma.value)); };\n}\n/**\n * Constructs a new `Option` from a nullable type. If the value is `null` or `undefined`, returns `None`, otherwise\n * returns the value wrapped in a `Some`\n *\n * @example\n * import { none, some, fromNullable } from 'fp-ts/lib/Option'\n *\n * assert.deepStrictEqual(fromNullable(undefined), none)\n * assert.deepStrictEqual(fromNullable(null), none)\n * assert.deepStrictEqual(fromNullable(1), some(1))\n *\n * @since 2.0.0\n */\nexport function fromNullable(a) {\n    return a == null ? none : some(a);\n}\n/**\n * Extracts the value out of the structure, if it exists. Otherwise returns `null`.\n *\n * @example\n * import { some, none, toNullable } from 'fp-ts/lib/Option'\n * import { pipe } from 'fp-ts/lib/pipeable'\n *\n * assert.strictEqual(\n *   pipe(\n *     some(1),\n *     toNullable\n *   ),\n *   1\n * )\n * assert.strictEqual(\n *   pipe(\n *     none,\n *     toNullable\n *   ),\n *   null\n * )\n *\n * @since 2.0.0\n */\nexport function toNullable(ma) {\n    return isNone(ma) ? null : ma.value;\n}\n/**\n * Extracts the value out of the structure, if it exists. Otherwise returns `undefined`.\n *\n * @example\n * import { some, none, toUndefined } from 'fp-ts/lib/Option'\n * import { pipe } from 'fp-ts/lib/pipeable'\n *\n * assert.strictEqual(\n *   pipe(\n *     some(1),\n *     toUndefined\n *   ),\n *   1\n * )\n * assert.strictEqual(\n *   pipe(\n *     none,\n *     toUndefined\n *   ),\n *   undefined\n * )\n *\n * @since 2.0.0\n */\nexport function toUndefined(ma) {\n    return isNone(ma) ? undefined : ma.value;\n}\n/**\n * Extracts the value out of the structure, if it exists. Otherwise returns the given default value\n *\n * @example\n * import { some, none, getOrElse } from 'fp-ts/lib/Option'\n * import { pipe } from 'fp-ts/lib/pipeable'\n *\n * assert.strictEqual(\n *   pipe(\n *     some(1),\n *     getOrElse(() => 0)\n *   ),\n *   1\n * )\n * assert.strictEqual(\n *   pipe(\n *     none,\n *     getOrElse(() => 0)\n *   ),\n *   0\n * )\n *\n * @since 2.0.0\n */\nexport function getOrElse(onNone) {\n    return function (ma) { return (isNone(ma) ? onNone() : ma.value); };\n}\n/**\n * Returns `true` if `ma` contains `a`\n *\n * @example\n * import { some, none, elem } from 'fp-ts/lib/Option'\n * import { eqNumber } from 'fp-ts/lib/Eq'\n *\n * assert.strictEqual(elem(eqNumber)(1, some(1)), true)\n * assert.strictEqual(elem(eqNumber)(2, some(1)), false)\n * assert.strictEqual(elem(eqNumber)(1, none), false)\n *\n * @since 2.0.0\n */\nexport function elem(E) {\n    return function (a, ma) { return (isNone(ma) ? false : E.equals(a, ma.value)); };\n}\n/**\n * Returns `true` if the predicate is satisfied by the wrapped value\n *\n * @example\n * import { some, none, exists } from 'fp-ts/lib/Option'\n * import { pipe } from 'fp-ts/lib/pipeable'\n *\n * assert.strictEqual(\n *   pipe(\n *     some(1),\n *     exists(n => n > 0)\n *   ),\n *   true\n * )\n * assert.strictEqual(\n *   pipe(\n *     some(1),\n *     exists(n => n > 1)\n *   ),\n *   false\n * )\n * assert.strictEqual(\n *   pipe(\n *     none,\n *     exists(n => n > 0)\n *   ),\n *   false\n * )\n *\n * @since 2.0.0\n */\nexport function exists(predicate) {\n    return function (ma) { return (isNone(ma) ? false : predicate(ma.value)); };\n}\nexport function fromPredicate(predicate) {\n    return function (a) { return (predicate(a) ? some(a) : none); };\n}\n/**\n * Transforms an exception into an `Option`. If `f` throws, returns `None`, otherwise returns the output wrapped in\n * `Some`\n *\n * @example\n * import { none, some, tryCatch } from 'fp-ts/lib/Option'\n *\n * assert.deepStrictEqual(\n *   tryCatch(() => {\n *     throw new Error()\n *   }),\n *   none\n * )\n * assert.deepStrictEqual(tryCatch(() => 1), some(1))\n *\n * @since 2.0.0\n */\nexport function tryCatch(f) {\n    try {\n        return some(f());\n    }\n    catch (e) {\n        return none;\n    }\n}\n/**\n * Returns an `E` value if possible\n *\n * @since 2.0.0\n */\nexport function getLeft(ma) {\n    return ma._tag === 'Right' ? none : some(ma.left);\n}\n/**\n * Returns an `A` value if possible\n *\n * @since 2.0.0\n */\nexport function getRight(ma) {\n    return ma._tag === 'Left' ? none : some(ma.right);\n}\n/**\n * Returns a `Refinement` (i.e. a custom type guard) from a `Option` returning function.\n * This function ensures that a custom type guard definition is type-safe.\n *\n * ```ts\n * import { some, none, getRefinement } from 'fp-ts/lib/Option'\n *\n * type A = { type: 'A' }\n * type B = { type: 'B' }\n * type C = A | B\n *\n * const isA = (c: C): c is A => c.type === 'B' // <= typo but typescript doesn't complain\n * const isA = getRefinement<C, A>(c => (c.type === 'B' ? some(c) : none)) // static error: Type '\"B\"' is not assignable to type '\"A\"'\n * ```\n *\n * @since 2.0.0\n */\nexport function getRefinement(getOption) {\n    return function (a) { return isSome(getOption(a)); };\n}\n/**\n * This is `chain` + `fromNullable`, useful when working with optional values\n *\n * @example\n * import { some, none, fromNullable, mapNullable } from 'fp-ts/lib/Option'\n * import { pipe } from 'fp-ts/lib/pipeable'\n *\n * interface Employee {\n *   company?: {\n *     address?: {\n *       street?: {\n *         name?: string\n *       }\n *     }\n *   }\n * }\n *\n * const employee1: Employee = { company: { address: { street: { name: 'high street' } } } }\n *\n * assert.deepStrictEqual(\n *   pipe(\n *     fromNullable(employee1.company),\n *     mapNullable(company => company.address),\n *     mapNullable(address => address.street),\n *     mapNullable(street => street.name)\n *   ),\n *   some('high street')\n * )\n *\n * const employee2: Employee = { company: { address: { street: {} } } }\n *\n * assert.deepStrictEqual(\n *   pipe(\n *     fromNullable(employee2.company),\n *     mapNullable(company => company.address),\n *     mapNullable(address => address.street),\n *     mapNullable(street => street.name)\n *   ),\n *   none\n * )\n *\n * @since 2.0.0\n */\nexport function mapNullable(f) {\n    return function (ma) { return (isNone(ma) ? none : fromNullable(f(ma.value))); };\n}\n/**\n * @since 2.0.0\n */\nexport function getShow(S) {\n    return {\n        show: function (ma) { return (isNone(ma) ? 'none' : \"some(\" + S.show(ma.value) + \")\"); }\n    };\n}\n/**\n * @example\n * import { none, some, getEq } from 'fp-ts/lib/Option'\n * import { eqNumber } from 'fp-ts/lib/Eq'\n *\n * const E = getEq(eqNumber)\n * assert.strictEqual(E.equals(none, none), true)\n * assert.strictEqual(E.equals(none, some(1)), false)\n * assert.strictEqual(E.equals(some(1), none), false)\n * assert.strictEqual(E.equals(some(1), some(2)), false)\n * assert.strictEqual(E.equals(some(1), some(1)), true)\n *\n * @since 2.0.0\n */\nexport function getEq(E) {\n    return {\n        equals: function (x, y) { return x === y || (isNone(x) ? isNone(y) : isNone(y) ? false : E.equals(x.value, y.value)); }\n    };\n}\n/**\n * The `Ord` instance allows `Option` values to be compared with\n * `compare`, whenever there is an `Ord` instance for\n * the type the `Option` contains.\n *\n * `None` is considered to be less than any `Some` value.\n *\n *\n * @example\n * import { none, some, getOrd } from 'fp-ts/lib/Option'\n * import { ordNumber } from 'fp-ts/lib/Ord'\n *\n * const O = getOrd(ordNumber)\n * assert.strictEqual(O.compare(none, none), 0)\n * assert.strictEqual(O.compare(none, some(1)), -1)\n * assert.strictEqual(O.compare(some(1), none), 1)\n * assert.strictEqual(O.compare(some(1), some(2)), -1)\n * assert.strictEqual(O.compare(some(1), some(1)), 0)\n *\n * @since 2.0.0\n */\nexport function getOrd(O) {\n    return {\n        equals: getEq(O).equals,\n        compare: function (x, y) { return (x === y ? 0 : isSome(x) ? (isSome(y) ? O.compare(x.value, y.value) : 1) : -1); }\n    };\n}\n/**\n * `Apply` semigroup\n *\n * | x       | y       | concat(x, y)       |\n * | ------- | ------- | ------------------ |\n * | none    | none    | none               |\n * | some(a) | none    | none               |\n * | none    | some(a) | none               |\n * | some(a) | some(b) | some(concat(a, b)) |\n *\n * @example\n * import { getApplySemigroup, some, none } from 'fp-ts/lib/Option'\n * import { semigroupSum } from 'fp-ts/lib/Semigroup'\n *\n * const S = getApplySemigroup(semigroupSum)\n * assert.deepStrictEqual(S.concat(none, none), none)\n * assert.deepStrictEqual(S.concat(some(1), none), none)\n * assert.deepStrictEqual(S.concat(none, some(1)), none)\n * assert.deepStrictEqual(S.concat(some(1), some(2)), some(3))\n *\n * @since 2.0.0\n */\nexport function getApplySemigroup(S) {\n    return {\n        concat: function (x, y) { return (isSome(x) && isSome(y) ? some(S.concat(x.value, y.value)) : none); }\n    };\n}\n/**\n * @since 2.0.0\n */\nexport function getApplyMonoid(M) {\n    return __assign({}, getApplySemigroup(M), { empty: some(M.empty) });\n}\n/**\n * Monoid returning the left-most non-`None` value\n *\n * | x       | y       | concat(x, y) |\n * | ------- | ------- | ------------ |\n * | none    | none    | none         |\n * | some(a) | none    | some(a)      |\n * | none    | some(a) | some(a)      |\n * | some(a) | some(b) | some(a)      |\n *\n * @example\n * import { getFirstMonoid, some, none } from 'fp-ts/lib/Option'\n *\n * const M = getFirstMonoid<number>()\n * assert.deepStrictEqual(M.concat(none, none), none)\n * assert.deepStrictEqual(M.concat(some(1), none), some(1))\n * assert.deepStrictEqual(M.concat(none, some(1)), some(1))\n * assert.deepStrictEqual(M.concat(some(1), some(2)), some(1))\n *\n * @since 2.0.0\n */\nexport function getFirstMonoid() {\n    return {\n        concat: function (x, y) { return (isNone(x) ? y : x); },\n        empty: none\n    };\n}\n/**\n * Monoid returning the right-most non-`None` value\n *\n * | x       | y       | concat(x, y) |\n * | ------- | ------- | ------------ |\n * | none    | none    | none         |\n * | some(a) | none    | some(a)      |\n * | none    | some(a) | some(a)      |\n * | some(a) | some(b) | some(b)      |\n *\n * @example\n * import { getLastMonoid, some, none } from 'fp-ts/lib/Option'\n *\n * const M = getLastMonoid<number>()\n * assert.deepStrictEqual(M.concat(none, none), none)\n * assert.deepStrictEqual(M.concat(some(1), none), some(1))\n * assert.deepStrictEqual(M.concat(none, some(1)), some(1))\n * assert.deepStrictEqual(M.concat(some(1), some(2)), some(2))\n *\n * @since 2.0.0\n */\nexport function getLastMonoid() {\n    return {\n        concat: function (x, y) { return (isNone(y) ? x : y); },\n        empty: none\n    };\n}\n/**\n * Monoid returning the left-most non-`None` value. If both operands are `Some`s then the inner values are\n * appended using the provided `Semigroup`\n *\n * | x       | y       | concat(x, y)       |\n * | ------- | ------- | ------------------ |\n * | none    | none    | none               |\n * | some(a) | none    | some(a)            |\n * | none    | some(a) | some(a)            |\n * | some(a) | some(b) | some(concat(a, b)) |\n *\n * @example\n * import { getMonoid, some, none } from 'fp-ts/lib/Option'\n * import { semigroupSum } from 'fp-ts/lib/Semigroup'\n *\n * const M = getMonoid(semigroupSum)\n * assert.deepStrictEqual(M.concat(none, none), none)\n * assert.deepStrictEqual(M.concat(some(1), none), some(1))\n * assert.deepStrictEqual(M.concat(none, some(1)), some(1))\n * assert.deepStrictEqual(M.concat(some(1), some(2)), some(3))\n *\n * @since 2.0.0\n */\nexport function getMonoid(S) {\n    return {\n        concat: function (x, y) { return (isNone(x) ? y : isNone(y) ? x : some(S.concat(x.value, y.value))); },\n        empty: none\n    };\n}\nvar defaultSeparate = { left: none, right: none };\nvar identity = function (a) { return a; };\n/**\n * @since 2.0.0\n */\nexport var option = {\n    URI: URI,\n    map: function (ma, f) { return (isNone(ma) ? none : some(f(ma.value))); },\n    of: some,\n    ap: function (mab, ma) { return (isNone(mab) ? none : isNone(ma) ? none : some(mab.value(ma.value))); },\n    chain: function (ma, f) { return (isNone(ma) ? none : f(ma.value)); },\n    reduce: function (fa, b, f) { return (isNone(fa) ? b : f(b, fa.value)); },\n    foldMap: function (M) { return function (fa, f) { return (isNone(fa) ? M.empty : f(fa.value)); }; },\n    reduceRight: function (fa, b, f) { return (isNone(fa) ? b : f(fa.value, b)); },\n    traverse: function (F) { return function (ta, f) {\n        return isNone(ta) ? F.of(none) : F.map(f(ta.value), some);\n    }; },\n    sequence: function (F) { return function (ta) {\n        return isNone(ta) ? F.of(none) : F.map(ta.value, some);\n    }; },\n    zero: function () { return none; },\n    alt: function (ma, f) { return (isNone(ma) ? f() : ma); },\n    extend: function (wa, f) { return (isNone(wa) ? none : some(f(wa))); },\n    compact: function (ma) { return option.chain(ma, identity); },\n    separate: function (ma) {\n        var o = option.map(ma, function (e) { return ({\n            left: getLeft(e),\n            right: getRight(e)\n        }); });\n        return isNone(o) ? defaultSeparate : o.value;\n    },\n    filter: function (fa, predicate) {\n        return isNone(fa) ? none : predicate(fa.value) ? fa : none;\n    },\n    filterMap: function (ma, f) { return (isNone(ma) ? none : f(ma.value)); },\n    partition: function (fa, predicate) {\n        return {\n            left: option.filter(fa, function (a) { return !predicate(a); }),\n            right: option.filter(fa, predicate)\n        };\n    },\n    partitionMap: function (fa, f) { return option.separate(option.map(fa, f)); },\n    wither: function (F) { return function (fa, f) {\n        return isNone(fa) ? F.of(none) : f(fa.value);\n    }; },\n    wilt: function (F) { return function (fa, f) {\n        var o = option.map(fa, function (a) {\n            return F.map(f(a), function (e) { return ({\n                left: getLeft(e),\n                right: getRight(e)\n            }); });\n        });\n        return isNone(o)\n            ? F.of({\n                left: none,\n                right: none\n            })\n            : o.value;\n    }; },\n    throwError: function () { return none; }\n};\nvar _a = pipeable(option), alt = _a.alt, ap = _a.ap, apFirst = _a.apFirst, apSecond = _a.apSecond, chain = _a.chain, chainFirst = _a.chainFirst, duplicate = _a.duplicate, extend = _a.extend, filter = _a.filter, filterMap = _a.filterMap, flatten = _a.flatten, foldMap = _a.foldMap, map = _a.map, partition = _a.partition, partitionMap = _a.partitionMap, reduce = _a.reduce, reduceRight = _a.reduceRight, compact = _a.compact, separate = _a.separate, fromEither = _a.fromEither;\nexport { \n/**\n * @since 2.0.0\n */\nalt, \n/**\n * @since 2.0.0\n */\nap, \n/**\n * @since 2.0.0\n */\napFirst, \n/**\n * @since 2.0.0\n */\napSecond, \n/**\n * @since 2.0.0\n */\nchain, \n/**\n * @since 2.0.0\n */\nchainFirst, \n/**\n * @since 2.0.0\n */\nduplicate, \n/**\n * @since 2.0.0\n */\nextend, \n/**\n * @since 2.0.0\n */\nfilter, \n/**\n * @since 2.0.0\n */\nfilterMap, \n/**\n * @since 2.0.0\n */\nflatten, \n/**\n * @since 2.0.0\n */\nfoldMap, \n/**\n * @since 2.0.0\n */\nmap, \n/**\n * @since 2.0.0\n */\npartition, \n/**\n * @since 2.0.0\n */\npartitionMap, \n/**\n * @since 2.0.0\n */\nreduce, \n/**\n * @since 2.0.0\n */\nreduceRight, \n/**\n * @since 2.0.0\n */\ncompact, \n/**\n * @since 2.0.0\n */\nseparate, \n/**\n * @since 2.0.0\n */\nfromEither };\n"
+        },
+        {
+          "id": "./node_modules/fp-ts/es6/function.js",
+          "identifier": "/Users/Karol/Projects/Open Source/tree-shaking-test/node_modules/fp-ts/es6/function.js",
+          "name": "./node_modules/fp-ts/es6/function.js",
+          "index": 3,
+          "index2": 0,
+          "size": 2763,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            "main"
+          ],
+          "issuer": "/Users/Karol/Projects/Open Source/tree-shaking-test/node_modules/fp-ts/es6/pipeable.js",
+          "issuerId": "./node_modules/fp-ts/es6/pipeable.js",
+          "issuerName": "./node_modules/fp-ts/es6/pipeable.js",
+          "issuerPath": [
+            {
+              "id": "./src/index.js",
+              "identifier": "/Users/Karol/Projects/Open Source/tree-shaking-test/src/index.js",
+              "name": "./src/index.js"
+            },
+            {
+              "id": "./node_modules/fp-ts/es6/Option.js",
+              "identifier": "/Users/Karol/Projects/Open Source/tree-shaking-test/node_modules/fp-ts/es6/Option.js",
+              "name": "./node_modules/fp-ts/es6/Option.js"
+            },
+            {
+              "id": "./node_modules/fp-ts/es6/pipeable.js",
+              "identifier": "/Users/Karol/Projects/Open Source/tree-shaking-test/node_modules/fp-ts/es6/pipeable.js",
+              "name": "./node_modules/fp-ts/es6/pipeable.js"
+            }
+          ],
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [
+          ],
+          "reasons": [
+            {
+              "moduleId": "./node_modules/fp-ts/es6/pipeable.js",
+              "moduleIdentifier": "/Users/Karol/Projects/Open Source/tree-shaking-test/node_modules/fp-ts/es6/pipeable.js",
+              "module": "./node_modules/fp-ts/es6/pipeable.js",
+              "moduleName": "./node_modules/fp-ts/es6/pipeable.js",
+              "type": "harmony side effect evaluation",
+              "userRequest": "./function",
+              "loc": "1:0-38"
+            },
+            {
+              "moduleId": "./node_modules/fp-ts/es6/pipeable.js",
+              "moduleIdentifier": "/Users/Karol/Projects/Open Source/tree-shaking-test/node_modules/fp-ts/es6/pipeable.js",
+              "module": "./node_modules/fp-ts/es6/pipeable.js",
+              "moduleName": "./node_modules/fp-ts/es6/pipeable.js",
+              "type": "harmony import specifier",
+              "userRequest": "./function",
+              "loc": "68:59-67"
+            },
+            {
+              "moduleId": "./node_modules/fp-ts/es6/pipeable.js",
+              "moduleIdentifier": "/Users/Karol/Projects/Open Source/tree-shaking-test/node_modules/fp-ts/es6/pipeable.js",
+              "module": "./node_modules/fp-ts/es6/pipeable.js",
+              "moduleName": "./node_modules/fp-ts/es6/pipeable.js",
+              "type": "harmony import specifier",
+              "userRequest": "./function",
+              "loc": "81:60-68"
+            }
+          ],
+          "usedExports": [
+            "identity"
+          ],
+          "providedExports": [
+            "identity",
+            "unsafeCoerce",
+            "not",
+            "constant",
+            "constTrue",
+            "constFalse",
+            "constNull",
+            "constUndefined",
+            "constVoid",
+            "flip",
+            "flow",
+            "tuple",
+            "increment",
+            "decrement",
+            "absurd"
+          ],
+          "optimizationBailout": [
+          ],
+          "depth": 3,
+          "source": "/**\n * @since 2.0.0\n */\nexport function identity(a) {\n    return a;\n}\n/**\n * @since 2.0.0\n */\nexport var unsafeCoerce = identity;\n/**\n * @since 2.0.0\n */\nexport function not(predicate) {\n    return function (a) { return !predicate(a); };\n}\n/**\n * @since 2.0.0\n */\nexport function constant(a) {\n    return function () { return a; };\n}\n/**\n * A thunk that returns always `true`\n *\n * @since 2.0.0\n */\nexport var constTrue = function () {\n    return true;\n};\n/**\n * A thunk that returns always `false`\n *\n * @since 2.0.0\n */\nexport var constFalse = function () {\n    return false;\n};\n/**\n * A thunk that returns always `null`\n *\n * @since 2.0.0\n */\nexport var constNull = function () {\n    return null;\n};\n/**\n * A thunk that returns always `undefined`\n *\n * @since 2.0.0\n */\nexport var constUndefined = function () {\n    return;\n};\n/**\n * A thunk that returns always `void`\n *\n * @since 2.0.0\n */\nexport var constVoid = function () {\n    return;\n};\n/**\n * Flips the order of the arguments of a function of two arguments.\n *\n * @since 2.0.0\n */\nexport function flip(f) {\n    return function (b, a) { return f(a, b); };\n}\nexport function flow(ab, bc, cd, de, ef, fg, gh, hi, ij) {\n    switch (arguments.length) {\n        case 1:\n            return ab;\n        case 2:\n            return function () {\n                return bc(ab.apply(this, arguments));\n            };\n        case 3:\n            return function () {\n                return cd(bc(ab.apply(this, arguments)));\n            };\n        case 4:\n            return function () {\n                return de(cd(bc(ab.apply(this, arguments))));\n            };\n        case 5:\n            return function () {\n                return ef(de(cd(bc(ab.apply(this, arguments)))));\n            };\n        case 6:\n            return function () {\n                return fg(ef(de(cd(bc(ab.apply(this, arguments))))));\n            };\n        case 7:\n            return function () {\n                return gh(fg(ef(de(cd(bc(ab.apply(this, arguments)))))));\n            };\n        case 8:\n            return function () {\n                return hi(gh(fg(ef(de(cd(bc(ab.apply(this, arguments))))))));\n            };\n        case 9:\n            return function () {\n                return ij(hi(gh(fg(ef(de(cd(bc(ab.apply(this, arguments)))))))));\n            };\n    }\n}\n/**\n * @since 2.0.0\n */\nexport function tuple() {\n    var t = [];\n    for (var _i = 0; _i < arguments.length; _i++) {\n        t[_i] = arguments[_i];\n    }\n    return t;\n}\n/**\n * @since 2.0.0\n */\nexport function increment(n) {\n    return n + 1;\n}\n/**\n * @since 2.0.0\n */\nexport function decrement(n) {\n    return n - 1;\n}\n/**\n * @since 2.0.0\n */\nexport function absurd(_) {\n    throw new Error('Called `absurd` function which should be uncallable');\n}\n"
+        },
+        {
+          "id": "./node_modules/fp-ts/es6/pipeable.js",
+          "identifier": "/Users/Karol/Projects/Open Source/tree-shaking-test/node_modules/fp-ts/es6/pipeable.js",
+          "name": "./node_modules/fp-ts/es6/pipeable.js",
+          "index": 2,
+          "index2": 1,
+          "size": 7852,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            "main"
+          ],
+          "issuer": "/Users/Karol/Projects/Open Source/tree-shaking-test/node_modules/fp-ts/es6/Option.js",
+          "issuerId": "./node_modules/fp-ts/es6/Option.js",
+          "issuerName": "./node_modules/fp-ts/es6/Option.js",
+          "issuerPath": [
+            {
+              "id": "./src/index.js",
+              "identifier": "/Users/Karol/Projects/Open Source/tree-shaking-test/src/index.js",
+              "name": "./src/index.js"
+            },
+            {
+              "id": "./node_modules/fp-ts/es6/Option.js",
+              "identifier": "/Users/Karol/Projects/Open Source/tree-shaking-test/node_modules/fp-ts/es6/Option.js",
+              "name": "./node_modules/fp-ts/es6/Option.js"
+            }
+          ],
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [
+          ],
+          "reasons": [
+            {
+              "moduleId": "./node_modules/fp-ts/es6/Option.js",
+              "moduleIdentifier": "/Users/Karol/Projects/Open Source/tree-shaking-test/node_modules/fp-ts/es6/Option.js",
+              "module": "./node_modules/fp-ts/es6/Option.js",
+              "moduleName": "./node_modules/fp-ts/es6/Option.js",
+              "type": "harmony side effect evaluation",
+              "userRequest": "./pipeable",
+              "loc": "12:0-38"
+            },
+            {
+              "moduleId": "./node_modules/fp-ts/es6/Option.js",
+              "moduleIdentifier": "/Users/Karol/Projects/Open Source/tree-shaking-test/node_modules/fp-ts/es6/Option.js",
+              "module": "./node_modules/fp-ts/es6/Option.js",
+              "moduleName": "./node_modules/fp-ts/es6/Option.js",
+              "type": "harmony import specifier",
+              "userRequest": "./pipeable",
+              "loc": "571:9-17"
+            }
+          ],
+          "usedExports": [
+            "pipeable"
+          ],
+          "providedExports": [
+            "pipe",
+            "pipeable"
+          ],
+          "optimizationBailout": [
+          ],
+          "depth": 2,
+          "source": "import { identity } from './function';\nexport function pipe(a, ab, bc, cd, de, ef, fg, gh, hi, ij) {\n    switch (arguments.length) {\n        case 1:\n            return a;\n        case 2:\n            return ab(a);\n        case 3:\n            return bc(ab(a));\n        case 4:\n            return cd(bc(ab(a)));\n        case 5:\n            return de(cd(bc(ab(a))));\n        case 6:\n            return ef(de(cd(bc(ab(a)))));\n        case 7:\n            return fg(ef(de(cd(bc(ab(a))))));\n        case 8:\n            return gh(fg(ef(de(cd(bc(ab(a)))))));\n        case 9:\n            return hi(gh(fg(ef(de(cd(bc(ab(a))))))));\n        case 10:\n            return ij(hi(gh(fg(ef(de(cd(bc(ab(a)))))))));\n    }\n}\nvar isFunctor = function (I) { return typeof I.map === 'function'; };\nvar isContravariant = function (I) { return typeof I.contramap === 'function'; };\nvar isFunctorWithIndex = function (I) { return typeof I.mapWithIndex === 'function'; };\nvar isApply = function (I) { return typeof I.ap === 'function'; };\nvar isChain = function (I) { return typeof I.chain === 'function'; };\nvar isBifunctor = function (I) { return typeof I.bimap === 'function'; };\nvar isExtend = function (I) { return typeof I.extend === 'function'; };\nvar isFoldable = function (I) { return typeof I.reduce === 'function'; };\nvar isFoldableWithIndex = function (I) { return typeof I.reduceWithIndex === 'function'; };\nvar isAlt = function (I) { return typeof I.alt === 'function'; };\nvar isCompactable = function (I) { return typeof I.compact === 'function'; };\nvar isFilterable = function (I) { return typeof I.filter === 'function'; };\nvar isFilterableWithIndex = function (I) {\n    return typeof I.filterWithIndex === 'function';\n};\nvar isProfunctor = function (I) { return typeof I.promap === 'function'; };\nvar isSemigroupoid = function (I) { return typeof I.compose === 'function'; };\nvar isMonadThrow = function (I) { return typeof I.throwError === 'function'; };\nexport function pipeable(I) {\n    var r = {};\n    if (isFunctor(I)) {\n        var map = function (f) { return function (fa) { return I.map(fa, f); }; };\n        r.map = map;\n    }\n    if (isContravariant(I)) {\n        var contramap = function (f) { return function (fa) { return I.contramap(fa, f); }; };\n        r.contramap = contramap;\n    }\n    if (isFunctorWithIndex(I)) {\n        var mapWithIndex = function (f) { return function (fa) { return I.mapWithIndex(fa, f); }; };\n        r.mapWithIndex = mapWithIndex;\n    }\n    if (isApply(I)) {\n        var ap = function (fa) { return function (fab) { return I.ap(fab, fa); }; };\n        var apFirst = function (fb) { return function (fa) { return I.ap(I.map(fa, function (a) { return function () { return a; }; }), fb); }; };\n        r.ap = ap;\n        r.apFirst = apFirst;\n        r.apSecond = function (fb) { return function (fa) { return I.ap(I.map(fa, function () { return function (b) { return b; }; }), fb); }; };\n    }\n    if (isChain(I)) {\n        var chain = function (f) { return function (ma) { return I.chain(ma, f); }; };\n        var chainFirst = function (f) { return function (ma) { return I.chain(ma, function (a) { return I.map(f(a), function () { return a; }); }); }; };\n        var flatten = function (mma) { return I.chain(mma, identity); };\n        r.chain = chain;\n        r.chainFirst = chainFirst;\n        r.flatten = flatten;\n    }\n    if (isBifunctor(I)) {\n        var bimap = function (f, g) { return function (fa) { return I.bimap(fa, f, g); }; };\n        var mapLeft = function (f) { return function (fa) { return I.mapLeft(fa, f); }; };\n        r.bimap = bimap;\n        r.mapLeft = mapLeft;\n    }\n    if (isExtend(I)) {\n        var extend = function (f) { return function (wa) { return I.extend(wa, f); }; };\n        var duplicate = function (wa) { return I.extend(wa, identity); };\n        r.extend = extend;\n        r.duplicate = duplicate;\n    }\n    if (isFoldable(I)) {\n        var reduce = function (b, f) { return function (fa) { return I.reduce(fa, b, f); }; };\n        var foldMap = function (M) {\n            var foldMapM = I.foldMap(M);\n            return function (f) { return function (fa) { return foldMapM(fa, f); }; };\n        };\n        var reduceRight = function (b, f) { return function (fa) { return I.reduceRight(fa, b, f); }; };\n        r.reduce = reduce;\n        r.foldMap = foldMap;\n        r.reduceRight = reduceRight;\n    }\n    if (isFoldableWithIndex(I)) {\n        var reduceWithIndex = function (b, f) { return function (fa) {\n            return I.reduceWithIndex(fa, b, f);\n        }; };\n        var foldMapWithIndex = function (M) {\n            var foldMapM = I.foldMapWithIndex(M);\n            return function (f) { return function (fa) { return foldMapM(fa, f); }; };\n        };\n        var reduceRightWithIndex = function (b, f) { return function (fa) {\n            return I.reduceRightWithIndex(fa, b, f);\n        }; };\n        r.reduceWithIndex = reduceWithIndex;\n        r.foldMapWithIndex = foldMapWithIndex;\n        r.reduceRightWithIndex = reduceRightWithIndex;\n    }\n    if (isAlt(I)) {\n        var alt = function (that) { return function (fa) { return I.alt(fa, that); }; };\n        r.alt = alt;\n    }\n    if (isCompactable(I)) {\n        r.compact = I.compact;\n        r.separate = I.separate;\n    }\n    if (isFilterable(I)) {\n        var filter = function (predicate) { return function (fa) {\n            return I.filter(fa, predicate);\n        }; };\n        var filterMap = function (f) { return function (fa) { return I.filterMap(fa, f); }; };\n        var partition = function (predicate) { return function (fa) {\n            return I.partition(fa, predicate);\n        }; };\n        var partitionMap = function (f) { return function (fa) { return I.partitionMap(fa, f); }; };\n        r.filter = filter;\n        r.filterMap = filterMap;\n        r.partition = partition;\n        r.partitionMap = partitionMap;\n    }\n    if (isFilterableWithIndex(I)) {\n        var filterWithIndex = function (predicateWithIndex) { return function (fa) { return I.filterWithIndex(fa, predicateWithIndex); }; };\n        var filterMapWithIndex = function (f) { return function (fa) {\n            return I.filterMapWithIndex(fa, f);\n        }; };\n        var partitionWithIndex = function (predicateWithIndex) { return function (fa) { return I.partitionWithIndex(fa, predicateWithIndex); }; };\n        var partitionMapWithIndex = function (f) { return function (fa) {\n            return I.partitionMapWithIndex(fa, f);\n        }; };\n        r.filterWithIndex = filterWithIndex;\n        r.filterMapWithIndex = filterMapWithIndex;\n        r.partitionWithIndex = partitionWithIndex;\n        r.partitionMapWithIndex = partitionMapWithIndex;\n    }\n    if (isProfunctor(I)) {\n        var promap = function (f, g) { return function (fa) { return I.promap(fa, f, g); }; };\n        r.promap = promap;\n    }\n    if (isSemigroupoid(I)) {\n        var compose = function (that) { return function (fa) {\n            return I.compose(fa, that);\n        }; };\n        r.compose = compose;\n    }\n    if (isMonadThrow(I)) {\n        var fromOption = function (onNone) { return function (ma) {\n            return ma._tag === 'None' ? I.throwError(onNone()) : I.of(ma.value);\n        }; };\n        var fromEither = function (ma) {\n            return ma._tag === 'Left' ? I.throwError(ma.left) : I.of(ma.right);\n        };\n        var fromPredicate = function (predicate, onFalse) { return function (a) { return (predicate(a) ? I.of(a) : I.throwError(onFalse(a))); }; };\n        var filterOrElse = function (predicate, onFalse) { return function (ma) { return I.chain(ma, function (a) { return (predicate(a) ? I.of(a) : I.throwError(onFalse(a))); }); }; };\n        r.fromOption = fromOption;\n        r.fromEither = fromEither;\n        r.fromPredicate = fromPredicate;\n        r.filterOrElse = filterOrElse;\n    }\n    return r;\n}\n"
+        },
+        {
+          "id": "./src/index.js",
+          "identifier": "/Users/Karol/Projects/Open Source/tree-shaking-test/src/index.js",
+          "name": "./src/index.js",
+          "index": 0,
+          "index2": 3,
+          "size": 80,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            "main"
+          ],
+          "issuer": null,
+          "issuerId": null,
+          "issuerName": null,
+          "issuerPath": null,
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [
+          ],
+          "reasons": [
+            {
+              "moduleId": null,
+              "moduleIdentifier": null,
+              "module": null,
+              "moduleName": null,
+              "type": "single entry",
+              "userRequest": "/Users/Karol/Projects/Open Source/tree-shaking-test/src/index.js",
+              "loc": "main"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": [
+          ],
+          "optimizationBailout": [
+          ],
+          "depth": 0,
+          "source": "import { fromNullable } from \"fp-ts/es6/Option\";\n\nconsole.log(fromNullable(1));\n"
+        }
+      ],
+      "filteredModules": 0,
+      "origins": [
+        {
+          "module": "",
+          "moduleIdentifier": "",
+          "moduleName": "",
+          "loc": "main",
+          "request": "/Users/Karol/Projects/Open Source/tree-shaking-test/src/index.js",
+          "reasons": [
+          ]
+        }
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "id": "./node_modules/fp-ts/es6/Option.js",
+      "identifier": "/Users/Karol/Projects/Open Source/tree-shaking-test/node_modules/fp-ts/es6/Option.js",
+      "name": "./node_modules/fp-ts/es6/Option.js",
+      "index": 1,
+      "index2": 2,
+      "size": 16805,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        "main"
+      ],
+      "issuer": "/Users/Karol/Projects/Open Source/tree-shaking-test/src/index.js",
+      "issuerId": "./src/index.js",
+      "issuerName": "./src/index.js",
+      "issuerPath": [
+        {
+          "id": "./src/index.js",
+          "identifier": "/Users/Karol/Projects/Open Source/tree-shaking-test/src/index.js",
+          "name": "./src/index.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [
+      ],
+      "reasons": [
+        {
+          "moduleId": "./src/index.js",
+          "moduleIdentifier": "/Users/Karol/Projects/Open Source/tree-shaking-test/src/index.js",
+          "module": "./src/index.js",
+          "moduleName": "./src/index.js",
+          "type": "harmony side effect evaluation",
+          "userRequest": "fp-ts/es6/Option",
+          "loc": "1:0-48"
+        },
+        {
+          "moduleId": "./src/index.js",
+          "moduleIdentifier": "/Users/Karol/Projects/Open Source/tree-shaking-test/src/index.js",
+          "module": "./src/index.js",
+          "moduleName": "./src/index.js",
+          "type": "harmony import specifier",
+          "userRequest": "fp-ts/es6/Option",
+          "loc": "3:12-24"
+        }
+      ],
+      "usedExports": [
+        "fromNullable"
+      ],
+      "providedExports": [
+        "URI",
+        "none",
+        "some",
+        "isSome",
+        "isNone",
+        "fold",
+        "fromNullable",
+        "toNullable",
+        "toUndefined",
+        "getOrElse",
+        "elem",
+        "exists",
+        "fromPredicate",
+        "tryCatch",
+        "getLeft",
+        "getRight",
+        "getRefinement",
+        "mapNullable",
+        "getShow",
+        "getEq",
+        "getOrd",
+        "getApplySemigroup",
+        "getApplyMonoid",
+        "getFirstMonoid",
+        "getLastMonoid",
+        "getMonoid",
+        "option",
+        "alt",
+        "ap",
+        "apFirst",
+        "apSecond",
+        "chain",
+        "chainFirst",
+        "duplicate",
+        "extend",
+        "filter",
+        "filterMap",
+        "flatten",
+        "foldMap",
+        "map",
+        "partition",
+        "partitionMap",
+        "reduce",
+        "reduceRight",
+        "compact",
+        "separate",
+        "fromEither"
+      ],
+      "optimizationBailout": [
+      ],
+      "depth": 1,
+      "source": "var __assign = (this && this.__assign) || function () {\n    __assign = Object.assign || function(t) {\n        for (var s, i = 1, n = arguments.length; i < n; i++) {\n            s = arguments[i];\n            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))\n                t[p] = s[p];\n        }\n        return t;\n    };\n    return __assign.apply(this, arguments);\n};\nimport { pipeable } from './pipeable';\n/**\n * @since 2.0.0\n */\nexport var URI = 'Option';\n/**\n * @since 2.0.0\n */\nexport var none = { _tag: 'None' };\n/**\n * @since 2.0.0\n */\nexport function some(a) {\n    return { _tag: 'Some', value: a };\n}\n/**\n * Returns `true` if the option is an instance of `Some`, `false` otherwise\n *\n * @example\n * import { some, none, isSome } from 'fp-ts/lib/Option'\n *\n * assert.strictEqual(isSome(some(1)), true)\n * assert.strictEqual(isSome(none), false)\n *\n * @since 2.0.0\n */\nexport function isSome(fa) {\n    return fa._tag === 'Some';\n}\n/**\n * Returns `true` if the option is `None`, `false` otherwise\n *\n * @example\n * import { some, none, isNone } from 'fp-ts/lib/Option'\n *\n * assert.strictEqual(isNone(some(1)), false)\n * assert.strictEqual(isNone(none), true)\n *\n * @since 2.0.0\n */\nexport function isNone(fa) {\n    return fa._tag === 'None';\n}\n/**\n * We can pattern match using the `fold` function\n *\n * @example\n * import { some, none, fold } from 'fp-ts/lib/Option'\n * import { pipe } from 'fp-ts/lib/pipeable'\n *\n * assert.strictEqual(\n *   pipe(\n *     some(1),\n *     fold(() => 'a none', a => `a some containing ${a}`)\n *   ),\n *   'a some containing 1'\n * )\n *\n * assert.strictEqual(\n *   pipe(\n *     none,\n *     fold(() => 'a none', a => `a some containing ${a}`)\n *   ),\n *   'a none'\n * )\n *\n * @since 2.0.0\n */\nexport function fold(onNone, onSome) {\n    return function (ma) { return (isNone(ma) ? onNone() : onSome(ma.value)); };\n}\n/**\n * Constructs a new `Option` from a nullable type. If the value is `null` or `undefined`, returns `None`, otherwise\n * returns the value wrapped in a `Some`\n *\n * @example\n * import { none, some, fromNullable } from 'fp-ts/lib/Option'\n *\n * assert.deepStrictEqual(fromNullable(undefined), none)\n * assert.deepStrictEqual(fromNullable(null), none)\n * assert.deepStrictEqual(fromNullable(1), some(1))\n *\n * @since 2.0.0\n */\nexport function fromNullable(a) {\n    return a == null ? none : some(a);\n}\n/**\n * Extracts the value out of the structure, if it exists. Otherwise returns `null`.\n *\n * @example\n * import { some, none, toNullable } from 'fp-ts/lib/Option'\n * import { pipe } from 'fp-ts/lib/pipeable'\n *\n * assert.strictEqual(\n *   pipe(\n *     some(1),\n *     toNullable\n *   ),\n *   1\n * )\n * assert.strictEqual(\n *   pipe(\n *     none,\n *     toNullable\n *   ),\n *   null\n * )\n *\n * @since 2.0.0\n */\nexport function toNullable(ma) {\n    return isNone(ma) ? null : ma.value;\n}\n/**\n * Extracts the value out of the structure, if it exists. Otherwise returns `undefined`.\n *\n * @example\n * import { some, none, toUndefined } from 'fp-ts/lib/Option'\n * import { pipe } from 'fp-ts/lib/pipeable'\n *\n * assert.strictEqual(\n *   pipe(\n *     some(1),\n *     toUndefined\n *   ),\n *   1\n * )\n * assert.strictEqual(\n *   pipe(\n *     none,\n *     toUndefined\n *   ),\n *   undefined\n * )\n *\n * @since 2.0.0\n */\nexport function toUndefined(ma) {\n    return isNone(ma) ? undefined : ma.value;\n}\n/**\n * Extracts the value out of the structure, if it exists. Otherwise returns the given default value\n *\n * @example\n * import { some, none, getOrElse } from 'fp-ts/lib/Option'\n * import { pipe } from 'fp-ts/lib/pipeable'\n *\n * assert.strictEqual(\n *   pipe(\n *     some(1),\n *     getOrElse(() => 0)\n *   ),\n *   1\n * )\n * assert.strictEqual(\n *   pipe(\n *     none,\n *     getOrElse(() => 0)\n *   ),\n *   0\n * )\n *\n * @since 2.0.0\n */\nexport function getOrElse(onNone) {\n    return function (ma) { return (isNone(ma) ? onNone() : ma.value); };\n}\n/**\n * Returns `true` if `ma` contains `a`\n *\n * @example\n * import { some, none, elem } from 'fp-ts/lib/Option'\n * import { eqNumber } from 'fp-ts/lib/Eq'\n *\n * assert.strictEqual(elem(eqNumber)(1, some(1)), true)\n * assert.strictEqual(elem(eqNumber)(2, some(1)), false)\n * assert.strictEqual(elem(eqNumber)(1, none), false)\n *\n * @since 2.0.0\n */\nexport function elem(E) {\n    return function (a, ma) { return (isNone(ma) ? false : E.equals(a, ma.value)); };\n}\n/**\n * Returns `true` if the predicate is satisfied by the wrapped value\n *\n * @example\n * import { some, none, exists } from 'fp-ts/lib/Option'\n * import { pipe } from 'fp-ts/lib/pipeable'\n *\n * assert.strictEqual(\n *   pipe(\n *     some(1),\n *     exists(n => n > 0)\n *   ),\n *   true\n * )\n * assert.strictEqual(\n *   pipe(\n *     some(1),\n *     exists(n => n > 1)\n *   ),\n *   false\n * )\n * assert.strictEqual(\n *   pipe(\n *     none,\n *     exists(n => n > 0)\n *   ),\n *   false\n * )\n *\n * @since 2.0.0\n */\nexport function exists(predicate) {\n    return function (ma) { return (isNone(ma) ? false : predicate(ma.value)); };\n}\nexport function fromPredicate(predicate) {\n    return function (a) { return (predicate(a) ? some(a) : none); };\n}\n/**\n * Transforms an exception into an `Option`. If `f` throws, returns `None`, otherwise returns the output wrapped in\n * `Some`\n *\n * @example\n * import { none, some, tryCatch } from 'fp-ts/lib/Option'\n *\n * assert.deepStrictEqual(\n *   tryCatch(() => {\n *     throw new Error()\n *   }),\n *   none\n * )\n * assert.deepStrictEqual(tryCatch(() => 1), some(1))\n *\n * @since 2.0.0\n */\nexport function tryCatch(f) {\n    try {\n        return some(f());\n    }\n    catch (e) {\n        return none;\n    }\n}\n/**\n * Returns an `E` value if possible\n *\n * @since 2.0.0\n */\nexport function getLeft(ma) {\n    return ma._tag === 'Right' ? none : some(ma.left);\n}\n/**\n * Returns an `A` value if possible\n *\n * @since 2.0.0\n */\nexport function getRight(ma) {\n    return ma._tag === 'Left' ? none : some(ma.right);\n}\n/**\n * Returns a `Refinement` (i.e. a custom type guard) from a `Option` returning function.\n * This function ensures that a custom type guard definition is type-safe.\n *\n * ```ts\n * import { some, none, getRefinement } from 'fp-ts/lib/Option'\n *\n * type A = { type: 'A' }\n * type B = { type: 'B' }\n * type C = A | B\n *\n * const isA = (c: C): c is A => c.type === 'B' // <= typo but typescript doesn't complain\n * const isA = getRefinement<C, A>(c => (c.type === 'B' ? some(c) : none)) // static error: Type '\"B\"' is not assignable to type '\"A\"'\n * ```\n *\n * @since 2.0.0\n */\nexport function getRefinement(getOption) {\n    return function (a) { return isSome(getOption(a)); };\n}\n/**\n * This is `chain` + `fromNullable`, useful when working with optional values\n *\n * @example\n * import { some, none, fromNullable, mapNullable } from 'fp-ts/lib/Option'\n * import { pipe } from 'fp-ts/lib/pipeable'\n *\n * interface Employee {\n *   company?: {\n *     address?: {\n *       street?: {\n *         name?: string\n *       }\n *     }\n *   }\n * }\n *\n * const employee1: Employee = { company: { address: { street: { name: 'high street' } } } }\n *\n * assert.deepStrictEqual(\n *   pipe(\n *     fromNullable(employee1.company),\n *     mapNullable(company => company.address),\n *     mapNullable(address => address.street),\n *     mapNullable(street => street.name)\n *   ),\n *   some('high street')\n * )\n *\n * const employee2: Employee = { company: { address: { street: {} } } }\n *\n * assert.deepStrictEqual(\n *   pipe(\n *     fromNullable(employee2.company),\n *     mapNullable(company => company.address),\n *     mapNullable(address => address.street),\n *     mapNullable(street => street.name)\n *   ),\n *   none\n * )\n *\n * @since 2.0.0\n */\nexport function mapNullable(f) {\n    return function (ma) { return (isNone(ma) ? none : fromNullable(f(ma.value))); };\n}\n/**\n * @since 2.0.0\n */\nexport function getShow(S) {\n    return {\n        show: function (ma) { return (isNone(ma) ? 'none' : \"some(\" + S.show(ma.value) + \")\"); }\n    };\n}\n/**\n * @example\n * import { none, some, getEq } from 'fp-ts/lib/Option'\n * import { eqNumber } from 'fp-ts/lib/Eq'\n *\n * const E = getEq(eqNumber)\n * assert.strictEqual(E.equals(none, none), true)\n * assert.strictEqual(E.equals(none, some(1)), false)\n * assert.strictEqual(E.equals(some(1), none), false)\n * assert.strictEqual(E.equals(some(1), some(2)), false)\n * assert.strictEqual(E.equals(some(1), some(1)), true)\n *\n * @since 2.0.0\n */\nexport function getEq(E) {\n    return {\n        equals: function (x, y) { return x === y || (isNone(x) ? isNone(y) : isNone(y) ? false : E.equals(x.value, y.value)); }\n    };\n}\n/**\n * The `Ord` instance allows `Option` values to be compared with\n * `compare`, whenever there is an `Ord` instance for\n * the type the `Option` contains.\n *\n * `None` is considered to be less than any `Some` value.\n *\n *\n * @example\n * import { none, some, getOrd } from 'fp-ts/lib/Option'\n * import { ordNumber } from 'fp-ts/lib/Ord'\n *\n * const O = getOrd(ordNumber)\n * assert.strictEqual(O.compare(none, none), 0)\n * assert.strictEqual(O.compare(none, some(1)), -1)\n * assert.strictEqual(O.compare(some(1), none), 1)\n * assert.strictEqual(O.compare(some(1), some(2)), -1)\n * assert.strictEqual(O.compare(some(1), some(1)), 0)\n *\n * @since 2.0.0\n */\nexport function getOrd(O) {\n    return {\n        equals: getEq(O).equals,\n        compare: function (x, y) { return (x === y ? 0 : isSome(x) ? (isSome(y) ? O.compare(x.value, y.value) : 1) : -1); }\n    };\n}\n/**\n * `Apply` semigroup\n *\n * | x       | y       | concat(x, y)       |\n * | ------- | ------- | ------------------ |\n * | none    | none    | none               |\n * | some(a) | none    | none               |\n * | none    | some(a) | none               |\n * | some(a) | some(b) | some(concat(a, b)) |\n *\n * @example\n * import { getApplySemigroup, some, none } from 'fp-ts/lib/Option'\n * import { semigroupSum } from 'fp-ts/lib/Semigroup'\n *\n * const S = getApplySemigroup(semigroupSum)\n * assert.deepStrictEqual(S.concat(none, none), none)\n * assert.deepStrictEqual(S.concat(some(1), none), none)\n * assert.deepStrictEqual(S.concat(none, some(1)), none)\n * assert.deepStrictEqual(S.concat(some(1), some(2)), some(3))\n *\n * @since 2.0.0\n */\nexport function getApplySemigroup(S) {\n    return {\n        concat: function (x, y) { return (isSome(x) && isSome(y) ? some(S.concat(x.value, y.value)) : none); }\n    };\n}\n/**\n * @since 2.0.0\n */\nexport function getApplyMonoid(M) {\n    return __assign({}, getApplySemigroup(M), { empty: some(M.empty) });\n}\n/**\n * Monoid returning the left-most non-`None` value\n *\n * | x       | y       | concat(x, y) |\n * | ------- | ------- | ------------ |\n * | none    | none    | none         |\n * | some(a) | none    | some(a)      |\n * | none    | some(a) | some(a)      |\n * | some(a) | some(b) | some(a)      |\n *\n * @example\n * import { getFirstMonoid, some, none } from 'fp-ts/lib/Option'\n *\n * const M = getFirstMonoid<number>()\n * assert.deepStrictEqual(M.concat(none, none), none)\n * assert.deepStrictEqual(M.concat(some(1), none), some(1))\n * assert.deepStrictEqual(M.concat(none, some(1)), some(1))\n * assert.deepStrictEqual(M.concat(some(1), some(2)), some(1))\n *\n * @since 2.0.0\n */\nexport function getFirstMonoid() {\n    return {\n        concat: function (x, y) { return (isNone(x) ? y : x); },\n        empty: none\n    };\n}\n/**\n * Monoid returning the right-most non-`None` value\n *\n * | x       | y       | concat(x, y) |\n * | ------- | ------- | ------------ |\n * | none    | none    | none         |\n * | some(a) | none    | some(a)      |\n * | none    | some(a) | some(a)      |\n * | some(a) | some(b) | some(b)      |\n *\n * @example\n * import { getLastMonoid, some, none } from 'fp-ts/lib/Option'\n *\n * const M = getLastMonoid<number>()\n * assert.deepStrictEqual(M.concat(none, none), none)\n * assert.deepStrictEqual(M.concat(some(1), none), some(1))\n * assert.deepStrictEqual(M.concat(none, some(1)), some(1))\n * assert.deepStrictEqual(M.concat(some(1), some(2)), some(2))\n *\n * @since 2.0.0\n */\nexport function getLastMonoid() {\n    return {\n        concat: function (x, y) { return (isNone(y) ? x : y); },\n        empty: none\n    };\n}\n/**\n * Monoid returning the left-most non-`None` value. If both operands are `Some`s then the inner values are\n * appended using the provided `Semigroup`\n *\n * | x       | y       | concat(x, y)       |\n * | ------- | ------- | ------------------ |\n * | none    | none    | none               |\n * | some(a) | none    | some(a)            |\n * | none    | some(a) | some(a)            |\n * | some(a) | some(b) | some(concat(a, b)) |\n *\n * @example\n * import { getMonoid, some, none } from 'fp-ts/lib/Option'\n * import { semigroupSum } from 'fp-ts/lib/Semigroup'\n *\n * const M = getMonoid(semigroupSum)\n * assert.deepStrictEqual(M.concat(none, none), none)\n * assert.deepStrictEqual(M.concat(some(1), none), some(1))\n * assert.deepStrictEqual(M.concat(none, some(1)), some(1))\n * assert.deepStrictEqual(M.concat(some(1), some(2)), some(3))\n *\n * @since 2.0.0\n */\nexport function getMonoid(S) {\n    return {\n        concat: function (x, y) { return (isNone(x) ? y : isNone(y) ? x : some(S.concat(x.value, y.value))); },\n        empty: none\n    };\n}\nvar defaultSeparate = { left: none, right: none };\nvar identity = function (a) { return a; };\n/**\n * @since 2.0.0\n */\nexport var option = {\n    URI: URI,\n    map: function (ma, f) { return (isNone(ma) ? none : some(f(ma.value))); },\n    of: some,\n    ap: function (mab, ma) { return (isNone(mab) ? none : isNone(ma) ? none : some(mab.value(ma.value))); },\n    chain: function (ma, f) { return (isNone(ma) ? none : f(ma.value)); },\n    reduce: function (fa, b, f) { return (isNone(fa) ? b : f(b, fa.value)); },\n    foldMap: function (M) { return function (fa, f) { return (isNone(fa) ? M.empty : f(fa.value)); }; },\n    reduceRight: function (fa, b, f) { return (isNone(fa) ? b : f(fa.value, b)); },\n    traverse: function (F) { return function (ta, f) {\n        return isNone(ta) ? F.of(none) : F.map(f(ta.value), some);\n    }; },\n    sequence: function (F) { return function (ta) {\n        return isNone(ta) ? F.of(none) : F.map(ta.value, some);\n    }; },\n    zero: function () { return none; },\n    alt: function (ma, f) { return (isNone(ma) ? f() : ma); },\n    extend: function (wa, f) { return (isNone(wa) ? none : some(f(wa))); },\n    compact: function (ma) { return option.chain(ma, identity); },\n    separate: function (ma) {\n        var o = option.map(ma, function (e) { return ({\n            left: getLeft(e),\n            right: getRight(e)\n        }); });\n        return isNone(o) ? defaultSeparate : o.value;\n    },\n    filter: function (fa, predicate) {\n        return isNone(fa) ? none : predicate(fa.value) ? fa : none;\n    },\n    filterMap: function (ma, f) { return (isNone(ma) ? none : f(ma.value)); },\n    partition: function (fa, predicate) {\n        return {\n            left: option.filter(fa, function (a) { return !predicate(a); }),\n            right: option.filter(fa, predicate)\n        };\n    },\n    partitionMap: function (fa, f) { return option.separate(option.map(fa, f)); },\n    wither: function (F) { return function (fa, f) {\n        return isNone(fa) ? F.of(none) : f(fa.value);\n    }; },\n    wilt: function (F) { return function (fa, f) {\n        var o = option.map(fa, function (a) {\n            return F.map(f(a), function (e) { return ({\n                left: getLeft(e),\n                right: getRight(e)\n            }); });\n        });\n        return isNone(o)\n            ? F.of({\n                left: none,\n                right: none\n            })\n            : o.value;\n    }; },\n    throwError: function () { return none; }\n};\nvar _a = pipeable(option), alt = _a.alt, ap = _a.ap, apFirst = _a.apFirst, apSecond = _a.apSecond, chain = _a.chain, chainFirst = _a.chainFirst, duplicate = _a.duplicate, extend = _a.extend, filter = _a.filter, filterMap = _a.filterMap, flatten = _a.flatten, foldMap = _a.foldMap, map = _a.map, partition = _a.partition, partitionMap = _a.partitionMap, reduce = _a.reduce, reduceRight = _a.reduceRight, compact = _a.compact, separate = _a.separate, fromEither = _a.fromEither;\nexport { \n/**\n * @since 2.0.0\n */\nalt, \n/**\n * @since 2.0.0\n */\nap, \n/**\n * @since 2.0.0\n */\napFirst, \n/**\n * @since 2.0.0\n */\napSecond, \n/**\n * @since 2.0.0\n */\nchain, \n/**\n * @since 2.0.0\n */\nchainFirst, \n/**\n * @since 2.0.0\n */\nduplicate, \n/**\n * @since 2.0.0\n */\nextend, \n/**\n * @since 2.0.0\n */\nfilter, \n/**\n * @since 2.0.0\n */\nfilterMap, \n/**\n * @since 2.0.0\n */\nflatten, \n/**\n * @since 2.0.0\n */\nfoldMap, \n/**\n * @since 2.0.0\n */\nmap, \n/**\n * @since 2.0.0\n */\npartition, \n/**\n * @since 2.0.0\n */\npartitionMap, \n/**\n * @since 2.0.0\n */\nreduce, \n/**\n * @since 2.0.0\n */\nreduceRight, \n/**\n * @since 2.0.0\n */\ncompact, \n/**\n * @since 2.0.0\n */\nseparate, \n/**\n * @since 2.0.0\n */\nfromEither };\n"
+    },
+    {
+      "id": "./node_modules/fp-ts/es6/function.js",
+      "identifier": "/Users/Karol/Projects/Open Source/tree-shaking-test/node_modules/fp-ts/es6/function.js",
+      "name": "./node_modules/fp-ts/es6/function.js",
+      "index": 3,
+      "index2": 0,
+      "size": 2763,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        "main"
+      ],
+      "issuer": "/Users/Karol/Projects/Open Source/tree-shaking-test/node_modules/fp-ts/es6/pipeable.js",
+      "issuerId": "./node_modules/fp-ts/es6/pipeable.js",
+      "issuerName": "./node_modules/fp-ts/es6/pipeable.js",
+      "issuerPath": [
+        {
+          "id": "./src/index.js",
+          "identifier": "/Users/Karol/Projects/Open Source/tree-shaking-test/src/index.js",
+          "name": "./src/index.js"
+        },
+        {
+          "id": "./node_modules/fp-ts/es6/Option.js",
+          "identifier": "/Users/Karol/Projects/Open Source/tree-shaking-test/node_modules/fp-ts/es6/Option.js",
+          "name": "./node_modules/fp-ts/es6/Option.js"
+        },
+        {
+          "id": "./node_modules/fp-ts/es6/pipeable.js",
+          "identifier": "/Users/Karol/Projects/Open Source/tree-shaking-test/node_modules/fp-ts/es6/pipeable.js",
+          "name": "./node_modules/fp-ts/es6/pipeable.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [
+      ],
+      "reasons": [
+        {
+          "moduleId": "./node_modules/fp-ts/es6/pipeable.js",
+          "moduleIdentifier": "/Users/Karol/Projects/Open Source/tree-shaking-test/node_modules/fp-ts/es6/pipeable.js",
+          "module": "./node_modules/fp-ts/es6/pipeable.js",
+          "moduleName": "./node_modules/fp-ts/es6/pipeable.js",
+          "type": "harmony side effect evaluation",
+          "userRequest": "./function",
+          "loc": "1:0-38"
+        },
+        {
+          "moduleId": "./node_modules/fp-ts/es6/pipeable.js",
+          "moduleIdentifier": "/Users/Karol/Projects/Open Source/tree-shaking-test/node_modules/fp-ts/es6/pipeable.js",
+          "module": "./node_modules/fp-ts/es6/pipeable.js",
+          "moduleName": "./node_modules/fp-ts/es6/pipeable.js",
+          "type": "harmony import specifier",
+          "userRequest": "./function",
+          "loc": "68:59-67"
+        },
+        {
+          "moduleId": "./node_modules/fp-ts/es6/pipeable.js",
+          "moduleIdentifier": "/Users/Karol/Projects/Open Source/tree-shaking-test/node_modules/fp-ts/es6/pipeable.js",
+          "module": "./node_modules/fp-ts/es6/pipeable.js",
+          "moduleName": "./node_modules/fp-ts/es6/pipeable.js",
+          "type": "harmony import specifier",
+          "userRequest": "./function",
+          "loc": "81:60-68"
+        }
+      ],
+      "usedExports": [
+        "identity"
+      ],
+      "providedExports": [
+        "identity",
+        "unsafeCoerce",
+        "not",
+        "constant",
+        "constTrue",
+        "constFalse",
+        "constNull",
+        "constUndefined",
+        "constVoid",
+        "flip",
+        "flow",
+        "tuple",
+        "increment",
+        "decrement",
+        "absurd"
+      ],
+      "optimizationBailout": [
+      ],
+      "depth": 3,
+      "source": "/**\n * @since 2.0.0\n */\nexport function identity(a) {\n    return a;\n}\n/**\n * @since 2.0.0\n */\nexport var unsafeCoerce = identity;\n/**\n * @since 2.0.0\n */\nexport function not(predicate) {\n    return function (a) { return !predicate(a); };\n}\n/**\n * @since 2.0.0\n */\nexport function constant(a) {\n    return function () { return a; };\n}\n/**\n * A thunk that returns always `true`\n *\n * @since 2.0.0\n */\nexport var constTrue = function () {\n    return true;\n};\n/**\n * A thunk that returns always `false`\n *\n * @since 2.0.0\n */\nexport var constFalse = function () {\n    return false;\n};\n/**\n * A thunk that returns always `null`\n *\n * @since 2.0.0\n */\nexport var constNull = function () {\n    return null;\n};\n/**\n * A thunk that returns always `undefined`\n *\n * @since 2.0.0\n */\nexport var constUndefined = function () {\n    return;\n};\n/**\n * A thunk that returns always `void`\n *\n * @since 2.0.0\n */\nexport var constVoid = function () {\n    return;\n};\n/**\n * Flips the order of the arguments of a function of two arguments.\n *\n * @since 2.0.0\n */\nexport function flip(f) {\n    return function (b, a) { return f(a, b); };\n}\nexport function flow(ab, bc, cd, de, ef, fg, gh, hi, ij) {\n    switch (arguments.length) {\n        case 1:\n            return ab;\n        case 2:\n            return function () {\n                return bc(ab.apply(this, arguments));\n            };\n        case 3:\n            return function () {\n                return cd(bc(ab.apply(this, arguments)));\n            };\n        case 4:\n            return function () {\n                return de(cd(bc(ab.apply(this, arguments))));\n            };\n        case 5:\n            return function () {\n                return ef(de(cd(bc(ab.apply(this, arguments)))));\n            };\n        case 6:\n            return function () {\n                return fg(ef(de(cd(bc(ab.apply(this, arguments))))));\n            };\n        case 7:\n            return function () {\n                return gh(fg(ef(de(cd(bc(ab.apply(this, arguments)))))));\n            };\n        case 8:\n            return function () {\n                return hi(gh(fg(ef(de(cd(bc(ab.apply(this, arguments))))))));\n            };\n        case 9:\n            return function () {\n                return ij(hi(gh(fg(ef(de(cd(bc(ab.apply(this, arguments)))))))));\n            };\n    }\n}\n/**\n * @since 2.0.0\n */\nexport function tuple() {\n    var t = [];\n    for (var _i = 0; _i < arguments.length; _i++) {\n        t[_i] = arguments[_i];\n    }\n    return t;\n}\n/**\n * @since 2.0.0\n */\nexport function increment(n) {\n    return n + 1;\n}\n/**\n * @since 2.0.0\n */\nexport function decrement(n) {\n    return n - 1;\n}\n/**\n * @since 2.0.0\n */\nexport function absurd(_) {\n    throw new Error('Called `absurd` function which should be uncallable');\n}\n"
+    },
+    {
+      "id": "./node_modules/fp-ts/es6/pipeable.js",
+      "identifier": "/Users/Karol/Projects/Open Source/tree-shaking-test/node_modules/fp-ts/es6/pipeable.js",
+      "name": "./node_modules/fp-ts/es6/pipeable.js",
+      "index": 2,
+      "index2": 1,
+      "size": 7852,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        "main"
+      ],
+      "issuer": "/Users/Karol/Projects/Open Source/tree-shaking-test/node_modules/fp-ts/es6/Option.js",
+      "issuerId": "./node_modules/fp-ts/es6/Option.js",
+      "issuerName": "./node_modules/fp-ts/es6/Option.js",
+      "issuerPath": [
+        {
+          "id": "./src/index.js",
+          "identifier": "/Users/Karol/Projects/Open Source/tree-shaking-test/src/index.js",
+          "name": "./src/index.js"
+        },
+        {
+          "id": "./node_modules/fp-ts/es6/Option.js",
+          "identifier": "/Users/Karol/Projects/Open Source/tree-shaking-test/node_modules/fp-ts/es6/Option.js",
+          "name": "./node_modules/fp-ts/es6/Option.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [
+      ],
+      "reasons": [
+        {
+          "moduleId": "./node_modules/fp-ts/es6/Option.js",
+          "moduleIdentifier": "/Users/Karol/Projects/Open Source/tree-shaking-test/node_modules/fp-ts/es6/Option.js",
+          "module": "./node_modules/fp-ts/es6/Option.js",
+          "moduleName": "./node_modules/fp-ts/es6/Option.js",
+          "type": "harmony side effect evaluation",
+          "userRequest": "./pipeable",
+          "loc": "12:0-38"
+        },
+        {
+          "moduleId": "./node_modules/fp-ts/es6/Option.js",
+          "moduleIdentifier": "/Users/Karol/Projects/Open Source/tree-shaking-test/node_modules/fp-ts/es6/Option.js",
+          "module": "./node_modules/fp-ts/es6/Option.js",
+          "moduleName": "./node_modules/fp-ts/es6/Option.js",
+          "type": "harmony import specifier",
+          "userRequest": "./pipeable",
+          "loc": "571:9-17"
+        }
+      ],
+      "usedExports": [
+        "pipeable"
+      ],
+      "providedExports": [
+        "pipe",
+        "pipeable"
+      ],
+      "optimizationBailout": [
+      ],
+      "depth": 2,
+      "source": "import { identity } from './function';\nexport function pipe(a, ab, bc, cd, de, ef, fg, gh, hi, ij) {\n    switch (arguments.length) {\n        case 1:\n            return a;\n        case 2:\n            return ab(a);\n        case 3:\n            return bc(ab(a));\n        case 4:\n            return cd(bc(ab(a)));\n        case 5:\n            return de(cd(bc(ab(a))));\n        case 6:\n            return ef(de(cd(bc(ab(a)))));\n        case 7:\n            return fg(ef(de(cd(bc(ab(a))))));\n        case 8:\n            return gh(fg(ef(de(cd(bc(ab(a)))))));\n        case 9:\n            return hi(gh(fg(ef(de(cd(bc(ab(a))))))));\n        case 10:\n            return ij(hi(gh(fg(ef(de(cd(bc(ab(a)))))))));\n    }\n}\nvar isFunctor = function (I) { return typeof I.map === 'function'; };\nvar isContravariant = function (I) { return typeof I.contramap === 'function'; };\nvar isFunctorWithIndex = function (I) { return typeof I.mapWithIndex === 'function'; };\nvar isApply = function (I) { return typeof I.ap === 'function'; };\nvar isChain = function (I) { return typeof I.chain === 'function'; };\nvar isBifunctor = function (I) { return typeof I.bimap === 'function'; };\nvar isExtend = function (I) { return typeof I.extend === 'function'; };\nvar isFoldable = function (I) { return typeof I.reduce === 'function'; };\nvar isFoldableWithIndex = function (I) { return typeof I.reduceWithIndex === 'function'; };\nvar isAlt = function (I) { return typeof I.alt === 'function'; };\nvar isCompactable = function (I) { return typeof I.compact === 'function'; };\nvar isFilterable = function (I) { return typeof I.filter === 'function'; };\nvar isFilterableWithIndex = function (I) {\n    return typeof I.filterWithIndex === 'function';\n};\nvar isProfunctor = function (I) { return typeof I.promap === 'function'; };\nvar isSemigroupoid = function (I) { return typeof I.compose === 'function'; };\nvar isMonadThrow = function (I) { return typeof I.throwError === 'function'; };\nexport function pipeable(I) {\n    var r = {};\n    if (isFunctor(I)) {\n        var map = function (f) { return function (fa) { return I.map(fa, f); }; };\n        r.map = map;\n    }\n    if (isContravariant(I)) {\n        var contramap = function (f) { return function (fa) { return I.contramap(fa, f); }; };\n        r.contramap = contramap;\n    }\n    if (isFunctorWithIndex(I)) {\n        var mapWithIndex = function (f) { return function (fa) { return I.mapWithIndex(fa, f); }; };\n        r.mapWithIndex = mapWithIndex;\n    }\n    if (isApply(I)) {\n        var ap = function (fa) { return function (fab) { return I.ap(fab, fa); }; };\n        var apFirst = function (fb) { return function (fa) { return I.ap(I.map(fa, function (a) { return function () { return a; }; }), fb); }; };\n        r.ap = ap;\n        r.apFirst = apFirst;\n        r.apSecond = function (fb) { return function (fa) { return I.ap(I.map(fa, function () { return function (b) { return b; }; }), fb); }; };\n    }\n    if (isChain(I)) {\n        var chain = function (f) { return function (ma) { return I.chain(ma, f); }; };\n        var chainFirst = function (f) { return function (ma) { return I.chain(ma, function (a) { return I.map(f(a), function () { return a; }); }); }; };\n        var flatten = function (mma) { return I.chain(mma, identity); };\n        r.chain = chain;\n        r.chainFirst = chainFirst;\n        r.flatten = flatten;\n    }\n    if (isBifunctor(I)) {\n        var bimap = function (f, g) { return function (fa) { return I.bimap(fa, f, g); }; };\n        var mapLeft = function (f) { return function (fa) { return I.mapLeft(fa, f); }; };\n        r.bimap = bimap;\n        r.mapLeft = mapLeft;\n    }\n    if (isExtend(I)) {\n        var extend = function (f) { return function (wa) { return I.extend(wa, f); }; };\n        var duplicate = function (wa) { return I.extend(wa, identity); };\n        r.extend = extend;\n        r.duplicate = duplicate;\n    }\n    if (isFoldable(I)) {\n        var reduce = function (b, f) { return function (fa) { return I.reduce(fa, b, f); }; };\n        var foldMap = function (M) {\n            var foldMapM = I.foldMap(M);\n            return function (f) { return function (fa) { return foldMapM(fa, f); }; };\n        };\n        var reduceRight = function (b, f) { return function (fa) { return I.reduceRight(fa, b, f); }; };\n        r.reduce = reduce;\n        r.foldMap = foldMap;\n        r.reduceRight = reduceRight;\n    }\n    if (isFoldableWithIndex(I)) {\n        var reduceWithIndex = function (b, f) { return function (fa) {\n            return I.reduceWithIndex(fa, b, f);\n        }; };\n        var foldMapWithIndex = function (M) {\n            var foldMapM = I.foldMapWithIndex(M);\n            return function (f) { return function (fa) { return foldMapM(fa, f); }; };\n        };\n        var reduceRightWithIndex = function (b, f) { return function (fa) {\n            return I.reduceRightWithIndex(fa, b, f);\n        }; };\n        r.reduceWithIndex = reduceWithIndex;\n        r.foldMapWithIndex = foldMapWithIndex;\n        r.reduceRightWithIndex = reduceRightWithIndex;\n    }\n    if (isAlt(I)) {\n        var alt = function (that) { return function (fa) { return I.alt(fa, that); }; };\n        r.alt = alt;\n    }\n    if (isCompactable(I)) {\n        r.compact = I.compact;\n        r.separate = I.separate;\n    }\n    if (isFilterable(I)) {\n        var filter = function (predicate) { return function (fa) {\n            return I.filter(fa, predicate);\n        }; };\n        var filterMap = function (f) { return function (fa) { return I.filterMap(fa, f); }; };\n        var partition = function (predicate) { return function (fa) {\n            return I.partition(fa, predicate);\n        }; };\n        var partitionMap = function (f) { return function (fa) { return I.partitionMap(fa, f); }; };\n        r.filter = filter;\n        r.filterMap = filterMap;\n        r.partition = partition;\n        r.partitionMap = partitionMap;\n    }\n    if (isFilterableWithIndex(I)) {\n        var filterWithIndex = function (predicateWithIndex) { return function (fa) { return I.filterWithIndex(fa, predicateWithIndex); }; };\n        var filterMapWithIndex = function (f) { return function (fa) {\n            return I.filterMapWithIndex(fa, f);\n        }; };\n        var partitionWithIndex = function (predicateWithIndex) { return function (fa) { return I.partitionWithIndex(fa, predicateWithIndex); }; };\n        var partitionMapWithIndex = function (f) { return function (fa) {\n            return I.partitionMapWithIndex(fa, f);\n        }; };\n        r.filterWithIndex = filterWithIndex;\n        r.filterMapWithIndex = filterMapWithIndex;\n        r.partitionWithIndex = partitionWithIndex;\n        r.partitionMapWithIndex = partitionMapWithIndex;\n    }\n    if (isProfunctor(I)) {\n        var promap = function (f, g) { return function (fa) { return I.promap(fa, f, g); }; };\n        r.promap = promap;\n    }\n    if (isSemigroupoid(I)) {\n        var compose = function (that) { return function (fa) {\n            return I.compose(fa, that);\n        }; };\n        r.compose = compose;\n    }\n    if (isMonadThrow(I)) {\n        var fromOption = function (onNone) { return function (ma) {\n            return ma._tag === 'None' ? I.throwError(onNone()) : I.of(ma.value);\n        }; };\n        var fromEither = function (ma) {\n            return ma._tag === 'Left' ? I.throwError(ma.left) : I.of(ma.right);\n        };\n        var fromPredicate = function (predicate, onFalse) { return function (a) { return (predicate(a) ? I.of(a) : I.throwError(onFalse(a))); }; };\n        var filterOrElse = function (predicate, onFalse) { return function (ma) { return I.chain(ma, function (a) { return (predicate(a) ? I.of(a) : I.throwError(onFalse(a))); }); }; };\n        r.fromOption = fromOption;\n        r.fromEither = fromEither;\n        r.fromPredicate = fromPredicate;\n        r.filterOrElse = filterOrElse;\n    }\n    return r;\n}\n"
+    },
+    {
+      "id": "./src/index.js",
+      "identifier": "/Users/Karol/Projects/Open Source/tree-shaking-test/src/index.js",
+      "name": "./src/index.js",
+      "index": 0,
+      "index2": 3,
+      "size": 80,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        "main"
+      ],
+      "issuer": null,
+      "issuerId": null,
+      "issuerName": null,
+      "issuerPath": null,
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [
+      ],
+      "reasons": [
+        {
+          "moduleId": null,
+          "moduleIdentifier": null,
+          "module": null,
+          "moduleName": null,
+          "type": "single entry",
+          "userRequest": "/Users/Karol/Projects/Open Source/tree-shaking-test/src/index.js",
+          "loc": "main"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": [
+      ],
+      "optimizationBailout": [
+      ],
+      "depth": 0,
+      "source": "import { fromNullable } from \"fp-ts/es6/Option\";\n\nconsole.log(fromNullable(1));\n"
+    }
+  ],
+  "filteredModules": 0,
+  "logging": {
+    "webpack.buildChunkGraph.visitModules": {
+      "entries": [
+      ],
+      "filteredEntries": 2,
+      "debug": false
+    }
+  },
+  "children": [
+  ]
+}
