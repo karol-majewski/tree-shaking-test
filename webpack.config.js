@@ -1,4 +1,5 @@
 const pathHelpers = require("path");
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 // Expect `__dirname` to be `/config/target/`.
 const ROOT_PATH = __dirname;
@@ -11,6 +12,12 @@ const OUTPUT_FILENAME = "index.js";
 const config = {
   mode: "development",
   devtool: "source-map",
+  plugins: [
+    new BundleAnalyzerPlugin({
+      defaultSizes: 'stat',
+      generateStatsFile: true
+    })
+  ],
   optimization: {
     usedExports: true
   },

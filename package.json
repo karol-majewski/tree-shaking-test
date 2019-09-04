@@ -4,5 +4,8 @@
     "fp-ts": "^2.0.5",
     "webpack": "^4.39.2",
     "webpack-cli": "^3.3.7"
+  },
+  "devDependencies": {
+    "webpack-bundle-analyzer": "^3.4.1"
   }
 }
