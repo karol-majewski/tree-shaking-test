@@ -15,3 +15,7 @@ code ./target/index.js
 |  5  | Facade without any executed code (import/export only) | `import { fromNullable } from './facade';`         | getApplicativeComposition, array, cons, copy ... ∞ | 336K         | No          |
 
 ¹ Measured with `du -hs target/index.js`
+
+## Using Webpack Bundle Analyzer
+
+Run `yarn webpack` and navigate to http://127.0.0.1:8888/ in your browser.
