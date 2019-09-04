@@ -2,6 +2,7 @@
   "sideEffects": false,
   "dependencies": {
     "fp-ts": "^2.0.5",
+    "rxjs": "^6.5.3",
     "webpack": "^4.39.2",
     "webpack-cli": "^3.3.7"
   },
