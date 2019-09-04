@@ -1,4 +1,4 @@
-import { fromNullable, bifunctor, zip, throwError } from './facade';
+import * as facade from './facade';
 import { Subject, scheduled, range, merge } from 'rxjs';
 
-console.log(fromNullable(1));
+console.log(facade.fromNullable(1));
