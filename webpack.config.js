@@ -15,7 +15,8 @@ const config = {
   plugins: [
     new BundleAnalyzerPlugin({
       defaultSizes: 'stat',
-      generateStatsFile: true
+      generateStatsFile: true,
+      openAnalyzer: false
     })
   ],
   optimization: {
