@@ -10,7 +10,7 @@ const ENTRY_FILENAME = "index.js";
 const OUTPUT_FILENAME = "index.js";
 
 const config = {
-  mode: "development",
+  mode: "production",
   devtool: "source-map",
   plugins: [
     new BundleAnalyzerPlugin({
