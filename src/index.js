@@ -1,3 +1,3 @@
-import { fromNullable } from "fp-ts/es6/Option";
+import * as option from "fp-ts/es6/Option";
 
-console.log(fromNullable(1));
+console.log(option.fromNullable(1));
